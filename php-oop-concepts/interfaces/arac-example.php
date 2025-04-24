@@ -26,3 +26,5 @@ echo $araba->sur(); // Çıktı: Araba sürülüyor.
 echo "\n";
 echo $bisiklet->sur(); // Çıktı: Bisiklet sürülüyor.
 ?>
+
+
