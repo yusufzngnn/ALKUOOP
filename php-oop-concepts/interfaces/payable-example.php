@@ -21,7 +21,6 @@ class PayPal implements IPayable {
         return "PayPal ile " . $amount . " TL ödendi.";
     }
 }
-//arayüzü uygulayan bitcoin sınıfı
 
 //arayüzü uygulayan crypto cüzdan sınıfı
 class CryptoWallet implements IPayable {
@@ -46,10 +45,7 @@ $cash = new Cash();
 $paypal = new PayPal();
 $cryptowallet = new CryptoWallet();
 $bankTransfer = new BankTransfer();
-
-
-
-
+// Ödeme işlemlerini gerçekleştirme
 echo processPayment($creditCard, 100); // Çıktı: Kredi kartı ile 100 TL ödendi.
 echo "\n";
 echo processPayment($cash, 50); // Çıktı: Nakit olarak 50 TL ödendi.
@@ -59,4 +55,3 @@ echo "\n";
 echo processPayment($cryptowallet, 300); // Çıktı: Kripto cüzdan ile 300 TL ödendi.
 echo "\n";
 echo processPayment($bankTransfer, 400); // Çıktı: Banka transferi ile 400 TL ödendi.
-?>
